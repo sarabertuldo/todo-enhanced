@@ -1,15 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
-import TodoApp from './components/TodoApp';
-import TodoList from './components/Todo';
-import Todo from './components/Todo';
+import logo from "./logo.svg";
+import "./App.css";
+import TodoApp from "./components/TodoApp";
+import TodoList from "./components/Todo";
+import Todo from "./components/Todo";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App background">
       <TodoApp />
-      {/* <TodoList />
-      <Todo /> */}
+      <TodoList />
+      <Todo />
     </div>
   );
 }

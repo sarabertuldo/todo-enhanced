@@ -14,16 +14,30 @@ const TodoList = (props) => {
       <li>
         {props.username} {props.task}
       </li>
-      <label>Filter</label>
-      {props.todos.filter}
+      <div>
+        <button type="filter" value="filterTodos">
+          Filter
+        </button>
+      </div>
       <input />
-      <button>Sort By</button>
-      {/* take each element and the index of that element
-    for each of those represent the {t} component and the key {idx} */}
-      {/* {props.todosProps.map}... */}
-      {props.todos.map((t, idx) => {
-        return <Todo todo={t} k={idx} />;
-      })}
+      <div>
+        <button
+          type="submit"
+          value="sortTodos"
+          onClick={() => {
+            let sortedTodos = props.todos.sort((a, b) =>
+              a.username > b.username ? 1 : -1
+            );
+            setSort([sortedTodos]);
+            console.log(sortedTodos);
+          }}
+        >
+          Sort By
+        </button>
+        {props.todos.map((t, index) => {
+          return <Todo todos={t} key={index} />;
+        })}
+      </div>
     </>
   );
 };

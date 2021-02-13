@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Todo from "./Todo";
 import TodoList from "./TodoList";
 
 // TodoApp is my entry page
@@ -8,24 +9,31 @@ const TodoApp = (props) => {
   const [username, setUsername] = useState("");
   const [task, setTask] = useState("");
   const [todos, setTodos] = useState([]);
+
   return (
     <>
-      <label htmlFor="username">Username</label>
-      <input
-        id="username"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-        type="text"
-      />
-      <label
-        htmlFor="task"
-        id="task"
-        value={task}
-        type="text"
-        onChange={(e) => setTask(e.target.value)}
-      >
-        Task
-      </label>
+      <div>
+        <label htmlFor="username">Name</label>
+        <input
+          id="username"
+          className="username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          type="text"
+        />
+      </div>
+      <div>
+        <label htmlFor="task">Task</label>
+        <input
+          id="task"
+          value={task}
+          onChange={(e) => setTask(e.target.value)}
+          type="text"
+        />
+      </div>
+      <p>
+        {username} - {task}
+      </p>
       <input />
       <button
         onClick={() => {
@@ -42,10 +50,6 @@ const TodoApp = (props) => {
         {" "}
         Add Todo
       </button>
-      {/* <TodoList childName = {} */}
-      {/* // first todos how to access in child, todos in TodoList would have to changed
-// second is the value, what i want  */}
-      {/* <TodoList todoProps= {todos} /> */}
       <TodoList todos={todos} />
     </>
   );
