@@ -10,11 +10,9 @@ import TodoList from "./TodoList";
 const Todos = (props) => {
   return (
     <>
-      <li>
-        {props.username} - {props.task}
-      </li>
-      {/* <Todo username={username} />
-      <Todo task={task} /> */}
+      <div class="todoArea">
+        {props.todos.username} - {props.todos.task}
+      </div>
     </>
   );
 };

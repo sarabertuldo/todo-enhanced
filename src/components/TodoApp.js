@@ -12,7 +12,7 @@ const TodoApp = (props) => {
 
   return (
     <>
-      <div>
+      <div class="inputArea">
         <label htmlFor="username">Name</label>
         <input
           id="username"
@@ -21,8 +21,8 @@ const TodoApp = (props) => {
           onChange={(e) => setUsername(e.target.value)}
           type="text"
         />
-      </div>
-      <div>
+        {/* </div>
+      <div> */}
         <label htmlFor="task">Task</label>
         <input
           id="task"
@@ -53,6 +53,7 @@ const TodoApp = (props) => {
         Add Todo
       </button>
       <TodoList todos={todos} />
+      <Todos todos={todos} />
     </>
   );
 };

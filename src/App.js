@@ -8,8 +8,8 @@ function App() {
   return (
     <div className="App background">
       <TodoApp />
-      <TodoList />
-      <Todos />
+      {/* <TodoList />
+      <Todos /> */}
     </div>
   );
 }

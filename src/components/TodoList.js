@@ -12,8 +12,15 @@ const TodoList = (props) => {
   return (
     <>
       <div>
-        <label>Filter:</label>
-        <input type="text" />
+        <button
+          type="submit"
+          value="setFilter"
+          onClick={() => {
+            let filteredTodos;
+          }}
+        >
+          Filter
+        </button>
       </div>
       <div>
         <button
@@ -21,13 +28,13 @@ const TodoList = (props) => {
           value="sortTodos"
           onClick={() => {
             let sortedTodos = props.todos.sort((a, b) =>
-              a.userName > b.task ? 1 : -1
+              a.username > b.username ? 1 : -1
             );
             setSort([sortedTodos]);
             console.log(sortedTodos);
           }}
         >
-          Sort A-Z:
+          Sort A-Z
         </button>
         {props.todos.map((t, index) => {
           return <Todos todos={t} key={index} />;
