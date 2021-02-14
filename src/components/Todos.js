@@ -7,7 +7,7 @@ import TodoList from "./TodoList";
 // the ability to keep track of what item was mostly recently added
 // buttons to delete items from the list
 
-const Todo = (props) => {
+const Todos = (props) => {
   return (
     <>
       <li>
@@ -15,9 +15,8 @@ const Todo = (props) => {
       </li>
       {/* <Todo username={username} />
       <Todo task={task} /> */}
-      <label htmlFor=""></label>
     </>
   );
 };
 
-export default Todo;
+export default Todos;

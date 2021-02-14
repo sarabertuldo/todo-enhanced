@@ -37,6 +37,7 @@
   }
 }
 .background {
+  background-repeat: repeat;
   background: rgb(2, 0, 36);
   background: linear-gradient(
     90deg,

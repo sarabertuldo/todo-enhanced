@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Todo from "./Todo";
+import Todos from "./Todos";
 import TodoList from "./TodoList";
 
 // TodoApp is my entry page
@@ -36,6 +36,8 @@ const TodoApp = (props) => {
       </p>
       <input />
       <button
+        type="submit"
+        value="addTodo"
         onClick={() => {
           let newTodo = {
             task,
