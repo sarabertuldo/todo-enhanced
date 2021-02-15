@@ -12,48 +12,56 @@ const TodoApp = (props) => {
 
   return (
     <>
-      <div class="inputArea">
-        <label htmlFor="username">Name</label>
+      <h1 class="center">To Do List:</h1>
+      <div class="inputArea center">
+        <label htmlFor="username"></label>
         <input
           id="username"
           className="username"
           value={username}
+          placeholder="Add name"
           onChange={(e) => setUsername(e.target.value)}
           type="text"
         />
-        {/* </div>
-      <div> */}
-        <label htmlFor="task">Task</label>
+      </div>
+      <div class="inputArea center">
+        <label htmlFor="task"></label>
         <input
           id="task"
           value={task}
+          placeholder="Add task"
           onChange={(e) => setTask(e.target.value)}
           type="text"
         />
       </div>
-      <p>
-        {username} - {task}
+      <p class="center">
+        {username} {task}
       </p>
-      <input />
-      <button
-        type="submit"
-        value="addTodo"
-        onClick={() => {
-          let newTodo = {
-            task,
-            username,
-          };
-          console.log(newTodo);
-          setTodos([...todos, newTodo]);
-          setUsername("");
-          setTask("");
-        }}
-      >
-        {" "}
-        Add Todo
-      </button>
-      <TodoList todos={todos} />
-      <Todos todos={todos} />
+      <div class="center">
+        <button
+          type="submit"
+          value="addTodo"
+          onClick={() => {
+            let newTodo = {
+              task,
+              username,
+            };
+            console.log(newTodo);
+            setTodos([...todos, newTodo]);
+            setUsername("");
+            setTask("");
+          }}
+        >
+          {" "}
+          Submit
+        </button>
+      </div>
+      <div>
+        <TodoList todos={todos} />
+      </div>
+      <div class="center">
+        <Todos todos={todos} />
+      </div>
     </>
   );
 };

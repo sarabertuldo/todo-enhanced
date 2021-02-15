@@ -4,7 +4,7 @@
 }
 
 .background {
-  background-repeat: repeat-y;
+  min-height: 1000px;
   background: rgb(2, 0, 36);
   background: linear-gradient(
     90deg,
@@ -17,10 +17,36 @@
   );
 }
 
+.center {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+}
+
 .todoArea {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   width: 200px;
+  margin: 5px;
   padding: 10px;
   border-radius: 10px;
+  border: 2px dashed black;
+  text-align: center;
+}
+
+h1 {
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+
+.listArea {
+  display: grid;
+  place-items: center;
+  /* display: block;
+  margin: auto;
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center; */
 }

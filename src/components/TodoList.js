@@ -9,9 +9,10 @@ const TodoList = (props) => {
   console.log(props.todos);
   const [filter, setFilter] = useState("");
   const [sort, setSort] = useState("");
+  // const [completed, setCompleted] = useState(true);
   return (
     <>
-      <div>
+      <div class="center">
         <button
           type="submit"
           value="setFilter"
@@ -22,7 +23,7 @@ const TodoList = (props) => {
           Filter
         </button>
       </div>
-      <div>
+      <div class="center">
         <button
           type="submit"
           value="sortTodos"
@@ -36,6 +37,8 @@ const TodoList = (props) => {
         >
           Sort A-Z
         </button>
+      </div>
+      <div class="listArea">
         {props.todos.map((t, index) => {
           return <Todos todos={t} key={index} />;
         })}
